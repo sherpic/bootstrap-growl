@@ -1,6 +1,7 @@
 The MIT License
 
-Copyright (c) Nick Larson, http://github.com/ifightcrime
+Copyright (c) Nick Larson, https://github.com/ifightcrime
+Modifications by Alex Russell, https://github.com/alexrussell
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

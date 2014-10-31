@@ -1,51 +1,53 @@
-#bootstrap-growl
+# bootstrap-growl
 
-Pretty simple jQuery plugin that turns standard Bootstrap alerts into hovering "Growl-like" notifications.
+Pretty simple jQuery plugin that turns standard Bootstrap alerts into hovering 'Growl-like' notifications.
 
-##Demo
+## Demo
 
 I have a basic demo set up at jsfiddle for the time being which you can view here: http://jsfiddle.net/ifightcrime/Us6WX/88/
 
-##Features
+## Features
 
-* Uses standard [Twitter Bootstrap alerts](http://twitter.github.com/bootstrap/components.html#alerts) which provides 'info', 'danger', and 'success' styles.
+* Uses standard [Bootstrap alerts](http://getbootstrap.com/components/#alerts) which provides 'success', 'info', 'warning', and 'danger' styles.
 * Multiple growls called consecutively are stacked up one after another in a list.
 * Automatically fades growls away after a default of 4 seconds.
 
-##Dependencies
+## Dependencies
 
-1. Latest version of jQuery. (tested on 2.1.1)
-2. [Twitter Bootstrap](http://twitter.github.com/bootstrap/index.html). (current rev tested with 3.1.1)
+1. Recent version of [jQuery](http://jquery.com/). (Tested on 1.11.1)
+2. [Bootstrap](http://getbootstrap.com/). (Tested on 3.2.0)
 
-##Usage
+## Usage
 
 Include the dependencies and `jquery.bootstrap-growl.min.js` into your page and call the following:
 
-```javascript
+``` javascript
 $.bootstrapGrowl("My message");
 ```
 
-##Available Options
+## Available Options
 
 By default, growls use the standard 'alert' Bootstrap style, are 250px wide, right aligned, and are positioned 20px from the top right of the page.
 
-```javascript
-$.bootstrapGrowl("another message, yay!", {
-  ele: 'body', // which element to append to
-  type: 'info', // (null, 'info', 'danger', 'success')
-  offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
-  align: 'right', // ('left', 'right', or 'center')
-  width: 250, // (integer, or 'auto')
-  delay: 4000, // Time while the message will be displayed. It's not equivalent to the *demo* timeOut!
-  allow_dismiss: true, // If true then will display a cross to close the popup.
-  stackup_spacing: 10 // spacing between consecutively stacked growls.
+``` javascript
+$.bootstrapGrowl('another message, yay!', {
+	ele: 'body',   // which element to append to
+	type: 'info',  // null, 'success', 'info', 'warning' or 'danger'
+	offset: {
+		from: 'top', // 'top', or 'bottom'
+		amount: 20   // integer
+	},
+	align: 'right',      // 'left', 'right', or 'center'
+	width: 250,          // integer, or 'auto'
+	delay: 4000,         // duration of popup
+	allow_dismiss: true, // allow closing of popup using Bootstrap close button
+	stackup_spacing: 10  // spacing between consecutively stacked growls
 });
 ```
 
-Note: Previous ```top_offset``` is not broken by this latest change.
-
-##Additional Contributors
+## Additional Contributors
 
 * Jose Martinez https://github.com/callado4
 * Lloyd Watkin https://github.com/lloydwatkin
 * TruongSinh Tran-Nguyen https://github.com/tran-nguyen
+* Alex Russell https://github.com/alexrussell
