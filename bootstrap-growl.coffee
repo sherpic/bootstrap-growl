@@ -65,6 +65,10 @@ $.bootstrapGrowl = (message, options) ->
 					$alert.alert 'close'
 			), options.delay
 
+	if options.callback
+		$alert.on 'closed.bs.alert', ->
+			options.callback()
+
 	$alert
 
 $.bootstrapGrowl.default_options =
@@ -78,4 +82,5 @@ $.bootstrapGrowl.default_options =
 	delay: 4000
 	allow_dismiss: true
 	stackup_spacing: 10
+	callback: null
 

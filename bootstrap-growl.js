@@ -68,6 +68,11 @@
         }), options.delay);
       });
     }
+    if (options.callback) {
+      $alert.on('closed.bs.alert', function() {
+        return options.callback();
+      });
+    }
     return $alert;
   };
 
@@ -82,7 +87,8 @@
     width: 250,
     delay: 4000,
     allow_dismiss: true,
-    stackup_spacing: 10
+    stackup_spacing: 10,
+    callback: null
   };
 
 }).call(this);
