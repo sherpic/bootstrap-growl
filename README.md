@@ -2,6 +2,9 @@
 
 Pretty simple jQuery plugin that turns standard Bootstrap alerts into hovering 'Growl-like' notifications.
 
+Forked from <https://github.com/ifightcrime/bootstrap-growl> as the library hadn't been updated in some time, and had
+some very old outstanding pull requests, and added features I desired.
+
 ## Demo
 
 I have a basic demo set up at jsfiddle for the time being which you can view here: http://jsfiddle.net/ifightcrime/Us6WX/88/
