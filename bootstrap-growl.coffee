@@ -51,8 +51,19 @@ $.bootstrapGrowl = (message, options) ->
 
 	# Only remove after delay if delay is more than 0
 	if options.delay > 0
-		$alert.delay(options.delay).fadeOut ->
-			$(this).alert 'close'
+		to = setTimeout (->
+			$alert.fadeOut ->
+				$alert.alert 'close'
+		), options.delay
+
+		$alert.on 'mouseenter', ->
+			clearTimeout to
+
+		$alert.on 'mouseleave', ->
+			to = setTimeout (->
+				$alert.fadeOut ->
+					$alert.alert 'close'
+			), options.delay
 
 	$alert
 

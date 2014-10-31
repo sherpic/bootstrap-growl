@@ -4,7 +4,7 @@
   $ = jQuery;
 
   $.bootstrapGrowl = function(message, options) {
-    var $alert, css, offsetAmount;
+    var $alert, css, offsetAmount, to;
     options = $.extend({}, $.bootstrapGrowl.default_options, options);
     $alert = $('<div>');
     $alert.attr('class', 'bootstrap-growl alert');
@@ -52,8 +52,20 @@
     }
     $alert.fadeIn();
     if (options.delay > 0) {
-      $alert.delay(options.delay).fadeOut(function() {
-        return $(this).alert('close');
+      to = setTimeout((function() {
+        return $alert.fadeOut(function() {
+          return $alert.alert('close');
+        });
+      }), options.delay);
+      $alert.on('mouseenter', function() {
+        return clearTimeout(to);
+      });
+      $alert.on('mouseleave', function() {
+        return to = setTimeout((function() {
+          return $alert.fadeOut(function() {
+            return $alert.alert('close');
+          });
+        }), options.delay);
       });
     }
     return $alert;
