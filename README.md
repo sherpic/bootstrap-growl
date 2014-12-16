@@ -7,7 +7,7 @@ some very old outstanding pull requests, and added features I desired.
 
 ## Demo
 
-I have a basic demo set up at jsfiddle for the time being which you can view here: http://jsfiddle.net/ifightcrime/Us6WX/88/
+I have a basic demo set up at jsfiddle for the time being which you can view here: http://jsfiddle.net/ifightcrime/Us6WX/1008/
 
 ## Features
 
@@ -18,7 +18,7 @@ I have a basic demo set up at jsfiddle for the time being which you can view her
 ## Dependencies
 
 1. Recent version of [jQuery](http://jquery.com/). (Tested on 1.11.1)
-2. [Bootstrap](http://getbootstrap.com/). (Tested on 3.2.0)
+2. [Bootstrap](http://getbootstrap.com/). (Tested on 3.3.1)
 
 ## Usage
 

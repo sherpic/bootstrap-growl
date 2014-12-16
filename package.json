@@ -10,11 +10,11 @@
   "contributors": [
     "Alex Russell <alex@clevercherry.com> (https://github.com/alexrussell)"
   ],
-  "main": "jquery.bootstrap-growl.js",
+  "main": "bootstrap-growl.js",
   "repositories": [
     {
       "type": "git",
-      "url": "http://github.com/ifightcrime/bootstrap-growl"
+      "url": "https://github.com/alexrussell/bootstrap-growl"
     }
   ],
   "devDependencies": {
