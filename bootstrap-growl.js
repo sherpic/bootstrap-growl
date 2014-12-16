@@ -12,7 +12,10 @@
       $alert.addClass('alert-' + options.type);
     }
     if (options.allow_dismiss) {
-      $alert.append('<a class="close" data-dismiss="alert" href="#">&times;</a>');
+      $alert.addClass('alert-dismissable');
+      if (options.allow_dismiss) {
+        $alert.append('<button class="close" data-dismiss="alert" type="button"><span aria-hidden="true">&times;</span><span classs="sr-only">Close</span></button>');
+      }
     }
     $alert.append(message);
     if (options.top_offset) {
