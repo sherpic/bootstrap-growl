@@ -8,7 +8,11 @@ $.bootstrapGrowl = (message, options) ->
 	$alert = $('<div>')
 	$alert.attr 'class', 'bootstrap-growl alert'
 	$alert.addClass 'alert-' + options.type if options.type
-	$alert.append '<a class="close" data-dismiss="alert" href="#">&times;</a>' if options.allow_dismiss
+
+	if options.allow_dismiss
+		$alert.addClass 'alert-dismissable'
+		$alert.append '<button class="close" data-dismiss="alert" type="button"><span aria-hidden="true">&times;</span><span classs="sr-only">Close</span></button>' if options.allow_dismiss
+
 	$alert.append message
 
 	# Prevent BC breaks
